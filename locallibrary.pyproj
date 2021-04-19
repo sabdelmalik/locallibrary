@@ -49,6 +49,10 @@
   <ItemGroup>
     <Content Include="catalog\static\css\styles.css" />
     <Content Include="catalog\templates\base_generic.html" />
+    <Content Include="catalog\templates\catalog\author_detail.html" />
+    <Content Include="catalog\templates\catalog\author_list.html" />
+    <Content Include="catalog\templates\catalog\book_detail.html" />
+    <Content Include="catalog\templates\catalog\book_list.html" />
     <Content Include="catalog\templates\catalog\index.html" />
     <Content Include="catalog\templates\index.html" />
     <Content Include="requirements.txt" />
