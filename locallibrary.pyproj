@@ -51,11 +51,20 @@
     <Content Include="catalog\templates\base_generic.html" />
     <Content Include="catalog\templates\catalog\author_detail.html" />
     <Content Include="catalog\templates\catalog\author_list.html" />
+    <Content Include="catalog\templates\catalog\bookinstance_list_borrowed.html" />
+    <Content Include="catalog\templates\catalog\bookinstance_list_borrowed_user.html" />
     <Content Include="catalog\templates\catalog\book_detail.html" />
     <Content Include="catalog\templates\catalog\book_list.html" />
     <Content Include="catalog\templates\catalog\index.html" />
     <Content Include="catalog\templates\index.html" />
     <Content Include="requirements.txt" />
+    <Content Include="templates\registration\logged_out.html" />
+    <Content Include="templates\registration\login.html" />
+    <Content Include="templates\registration\password_reset_complete.html" />
+    <Content Include="templates\registration\password_reset_confirm.html" />
+    <Content Include="templates\registration\password_reset_done.html" />
+    <Content Include="templates\registration\password_reset_email.html" />
+    <Content Include="templates\registration\password_reset_form.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="catalog\" />
@@ -65,6 +74,8 @@
     <Folder Include="catalog\templates\" />
     <Folder Include="catalog\templates\catalog\" />
     <Folder Include="locallibrary\" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\registration\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
