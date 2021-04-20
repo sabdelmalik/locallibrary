@@ -32,6 +32,9 @@
   <ItemGroup>
     <Compile Include="catalog\admin.py" />
     <Compile Include="catalog\apps.py" />
+    <Compile Include="catalog\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="catalog\migrations\__init__.py" />
     <Compile Include="catalog\models.py" />
     <Compile Include="catalog\tests.py" />
@@ -49,12 +52,17 @@
   <ItemGroup>
     <Content Include="catalog\static\css\styles.css" />
     <Content Include="catalog\templates\base_generic.html" />
+    <Content Include="catalog\templates\catalog\book_confirm_delete.html" />
+    <Content Include="catalog\templates\catalog\author_confirm_delete.html" />
     <Content Include="catalog\templates\catalog\author_detail.html" />
+    <Content Include="catalog\templates\catalog\book_form.html" />
+    <Content Include="catalog\templates\catalog\author_form.html" />
     <Content Include="catalog\templates\catalog\author_list.html" />
     <Content Include="catalog\templates\catalog\bookinstance_list_borrowed.html" />
     <Content Include="catalog\templates\catalog\bookinstance_list_borrowed_user.html" />
     <Content Include="catalog\templates\catalog\book_detail.html" />
     <Content Include="catalog\templates\catalog\book_list.html" />
+    <Content Include="catalog\templates\catalog\book_renew_librarian.html" />
     <Content Include="catalog\templates\catalog\index.html" />
     <Content Include="catalog\templates\index.html" />
     <Content Include="requirements.txt" />
