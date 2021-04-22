@@ -37,12 +37,28 @@
     </Compile>
     <Compile Include="catalog\migrations\__init__.py" />
     <Compile Include="catalog\models.py" />
-    <Compile Include="catalog\tests.py" />
+    <Compile Include="catalog\tests\test_forms.py" />
+    <Compile Include="catalog\tests\test_models.py" />
+    <Compile Include="catalog\tests\test_views.py" />
+    <Compile Include="catalog\tests\__init__.py" />
+    <Compile Include="catalog\test_verbose.py" />
+    <Compile Include="catalog\__tests.py" />
     <Compile Include="catalog\urls.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="catalog\views.py" />
     <Compile Include="catalog\__init__.py" />
+    <Compile Include="test_views.py" />
+    <Compile Include="test_forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_verbose.py" />
+    <Compile Include="check.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="manage.py" />
     <Compile Include="locallibrary\__init__.py" />
     <Compile Include="locallibrary\settings.py" />
@@ -65,6 +81,10 @@
     <Content Include="catalog\templates\catalog\book_renew_librarian.html" />
     <Content Include="catalog\templates\catalog\index.html" />
     <Content Include="catalog\templates\index.html" />
+    <Content Include="catalog\tests\__pycache__\test_forms.cpython-39.pyc" />
+    <Content Include="catalog\tests\__pycache__\test_models.cpython-39.pyc" />
+    <Content Include="catalog\tests\__pycache__\test_views.cpython-39.pyc" />
+    <Content Include="catalog\tests\__pycache__\__init__.cpython-39.pyc" />
     <Content Include="requirements.txt" />
     <Content Include="templates\registration\logged_out.html" />
     <Content Include="templates\registration\login.html" />
@@ -81,6 +101,8 @@
     <Folder Include="catalog\static\css\" />
     <Folder Include="catalog\templates\" />
     <Folder Include="catalog\templates\catalog\" />
+    <Folder Include="catalog\tests\" />
+    <Folder Include="catalog\tests\__pycache__\" />
     <Folder Include="locallibrary\" />
     <Folder Include="templates\" />
     <Folder Include="templates\registration\" />
