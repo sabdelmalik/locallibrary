@@ -99,6 +99,7 @@
     <Folder Include="catalog\migrations\" />
     <Folder Include="catalog\static\" />
     <Folder Include="catalog\static\css\" />
+    <Folder Include="catalog\static\images\" />
     <Folder Include="catalog\templates\" />
     <Folder Include="catalog\templates\catalog\" />
     <Folder Include="catalog\tests\" />

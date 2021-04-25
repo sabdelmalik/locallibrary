@@ -1,0 +1,338 @@
+
+C:\Users\samim\Documents\MyProjects\heroku\python-getting-started>cd C:\Users\samim\source\repos\locallibrary
+
+C:\Users\samim\source\repos\locallibrary>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 5C14-A23D
+
+ Directory of C:\Users\samim\source\repos\locallibrary
+
+04/22/2021  12:13 PM    <DIR>          .
+04/22/2021  12:13 PM    <DIR>          ..
+04/18/2021  11:22 AM             2,581 .gitattributes
+04/18/2021  11:22 AM             6,585 .gitignore
+04/21/2021  09:52 PM    <DIR>          catalog
+04/21/2021  05:54 PM                79 check.py
+04/22/2021  12:02 PM    <DIR>          env
+04/22/2021  12:29 PM    <DIR>          locallibrary
+04/21/2021  09:40 PM             7,642 locallibrary.pyproj
+04/21/2021  05:52 PM               299 locallibrary.pyproj.user
+04/17/2021  08:13 AM             1,129 locallibrary.sln
+04/17/2021  08:13 AM               748 manage.py
+04/17/2021  08:45 AM    <DIR>          obj
+04/22/2021  11:48 AM                46 Procfile
+04/22/2021  12:11 PM               145 requirements.txt
+04/22/2021  12:14 PM                12 runtime.txt
+04/19/2021  06:35 PM    <DIR>          templates
+04/21/2021  09:31 PM               110 test_forms.py
+04/21/2021  09:30 PM               109 test_models.py
+04/21/2021  09:09 PM                98 test_verbose.py
+04/21/2021  09:48 PM               130 test_views.py
+04/21/2021  09:09 PM    <DIR>          __pycache__
+              14 File(s)         19,713 bytes
+               8 Dir(s)  120,163,491,840 bytes free
+
+C:\Users\samim\source\repos\locallibrary>heroku login
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/c519d6f5-b2d7-4514-975d-fa5880389950?requestor=SFMyNTY.g2gDbQAAAAwxNjUuMjIuMjM2LjBuBgCBvmz6eAFiAAFRgA.IRxslgqUC6_5zAZUQXVFzXrEukghEnZAycEme1KFo-0
+Logging in... done
+Logged in as sami.malik@sympatico.ca
+
+C:\Users\samim\source\repos\locallibrary>heroku create
+Creating app... done, ⬢ mighty-brushlands-33303
+https://mighty-brushlands-33303.herokuapp.com/ | https://git.heroku.com/mighty-brushlands-33303.git
+
+C:\Users\samim\source\repos\locallibrary>heroku apps:rename SamiMalik
+Renaming mighty-brushlands-33303 to SamiMalik... !
+ !    Name must start with a letter, end with a letter or digit and can only contain lowercase letters, digits, and
+ !    dashes.
+
+C:\Users\samim\source\repos\locallibrary>heroku apps:rename samimalik
+Renaming mighty-brushlands-33303 to samimalik... done
+https://samimalik.herokuapp.com/ | https://git.heroku.com/samimalik.git
+ !    Don't forget to update git remotes for all other local checkouts of the app.
+Git remote heroku updated
+
+C:\Users\samim\source\repos\locallibrary>git push heroku main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://git.heroku.com/samimalik.git'
+
+C:\Users\samim\source\repos\locallibrary>git push heroku master
+Enumerating objects: 9698, done.
+Counting objects: 100% (9698/9698), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4968/4968), done.
+Writing objects: 100% (9698/9698), 11.50 MiB | 519.00 KiB/s, done.
+Total 9698 (delta 3274), reused 9513 (delta 3222), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Python app detected
+remote:  !     Python has released a security update! Please consider upgrading to python-3.9.4
+remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.9.2
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting asgiref==3.3.4
+remote:          Downloading asgiref-3.3.4-py3-none-any.whl (22 kB)
+remote:        Collecting dj-database-url==0.5.0
+remote:          Downloading dj_database_url-0.5.0-py2.py3-none-any.whl (5.5 kB)
+remote:        Collecting Django==3.2
+remote:          Downloading Django-3.2-py3-none-any.whl (7.9 MB)
+remote:        Collecting gunicorn==20.1.0
+remote:          Downloading gunicorn-20.1.0.tar.gz (370 kB)
+remote:        Collecting psycopg2-binary==2.8.6
+remote:          Downloading psycopg2_binary-2.8.6-cp39-cp39-manylinux1_x86_64.whl (3.0 MB)
+remote:        Collecting pytz==2021.1
+remote:          Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+remote:        Collecting sqlparse==0.4.1
+remote:          Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+remote:        Collecting whitenoise==5.2.0
+remote:          Downloading whitenoise-5.2.0-py2.py3-none-any.whl (19 kB)
+remote:        Building wheels for collected packages: gunicorn
+remote:          Building wheel for gunicorn (setup.py): started
+remote:          Building wheel for gunicorn (setup.py): finished with status 'done'
+remote:          Created wheel for gunicorn: filename=gunicorn-20.1.0-py3-none-any.whl size=78917 sha256=3b087e5180781b60338584c28a7ed23ff6707e01345e1134741da4c81cad1ccd
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-1r6d5l6j/wheels/ee/ca/72/3e9be4033d3993d4d78e2f4accdfcfff6c690921fef5ea0d57
+remote:        Successfully built gunicorn
+remote:        Installing collected packages: asgiref, dj-database-url, sqlparse, pytz, Django, gunicorn, psycopg2-binary, whitenoise
+remote:        Successfully installed Django-3.2 asgiref-3.3.4 dj-database-url-0.5.0 gunicorn-20.1.0 psycopg2-binary-2.8.6 pytz-2021.1 sqlparse-0.4.1 whitenoise-5.2.0
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        129 static files copied to '/tmp/build_fb9e0729/tmp/build_fb9e0729/staticfiles', 394 post-processed.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 72.3M
+remote: -----> Launching...
+remote:        Released v5
+remote:        https://samimalik.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/samimalik.git
+ * [new branch]      master -> master
+
+C:\Users\samim\source\repos\locallibrary>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ samimalik... up, run.2041 (Free)
+Operations to perform:
+  Apply all migrations: admin, auth, catalog, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying catalog.0001_initial... OK
+  Applying catalog.0002_auto_20210417_1446... OK
+  Applying catalog.0003_auto_20210417_1452... OK
+  Applying catalog.0004_bookinstance_borrower... OK
+  Applying catalog.0005_alter_bookinstance_options... OK
+  Applying sessions.0001_initial... OK
+
+C:\Users\samim\source\repos\locallibrary>heroku run python manage.py createsuperuser
+Running python manage.py createsuperuser on ⬢ samimalik... up, run.7665 (Free)
+Username (leave blank to use 'u20253'): sami
+Email address: sami.malik@sympatico.ca
+Password:
+Password (again):
+Superuser created successfully.
+
+C:\Users\samim\source\repos\locallibrary>heroku open
+
+C:\Users\samim\source\repos\locallibrary>git push heroku master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 361 bytes | 361.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Using buildpack: heroku/python
+remote: -----> Python app detected
+remote:  !     Python has released a security update! Please consider upgrading to python-3.9.4
+remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> No change in requirements detected, installing from cache
+remote: -----> Installing pip 20.2.4, setuptools 47.1.1 and wheel 0.36.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        129 static files copied to '/tmp/build_fc3d6de6/tmp/build_fc3d6de6/staticfiles', 409 post-processed.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 72.2M
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://samimalik.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/samimalik.git
+   659285e..01df9ab  master -> master
+
+C:\Users\samim\source\repos\locallibrary>heroku run python manage.py migrate
+Running python manage.py migrate on ⬢ samimalik... up, run.5520 (Free)
+Operations to perform:
+  Apply all migrations: admin, auth, catalog, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+
+C:\Users\samim\source\repos\locallibrary>heroku open
+
+C:\Users\samim\source\repos\locallibrary>heroku addons
+
+Add-on                                        Plan       Price  State
+────────────────────────────────────────────  ─────────  ─────  ───────
+heroku-postgresql (postgresql-tapered-38389)  hobby-dev  free   created
+ └─ as DATABASE
+
+The table above shows add-ons and the attachments to the current app (samimalik) or other apps.
+
+
+C:\Users\samim\source\repos\locallibrary>heroku addons:open heroku-postgresql
+Opening https://addons-sso.heroku.com/apps/1c9a4a93-f4c8-4053-a580-2174da274ab6/addons/8439cf04-1bbd-4a67-9f4b-6edb01ee70aa...
+
+C:\Users\samim\source\repos\locallibrary>heroku config
+=== samimalik Config Vars
+DATABASE_URL: postgres://huhqtwdjkcephv:1ed0be63221685ecbe7c8430c8e070855c4251235fd4e67188c5c75440303eb0@ec2-54-87-112-29.compute-1.amazonaws.com:5432/dalnhu3ls4rg6f
+
+Setting DJANGO_SECRET_KEY and restarting ⬢ samimalik... done, v7
+DJANGO_SECRET_KEY: +wa93==xq3#b5i+2#7=0nr2d++idpn)1v3!s^suaq^(6mm10%x
+
+C:\Users\samim\source\repos\locallibrary>heroku config:set DJANGO_DEBUG='False'
+Setting DJANGO_DEBUG and restarting ⬢ samimalik... done, v8
+DJANGO_DEBUG: 'False'
+
+C:\Users\samim\source\repos\locallibrary>heroku logs
+2021-04-22T16:48:08.266723+00:00 app[web.1]: 10.1.16.73 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.267559+00:00 heroku[router]: at=info method=GET path="/static/admin/css/dashboard.css" host=samimalik.herokuapp.com request_id=8be3fcee-736e-4138-89e0-0fb0e4394c23 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=200 bytes=732 protocol=https
+2021-04-22T16:48:08.297642+00:00 app[web.1]: 10.1.10.225 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.297764+00:00 heroku[router]: at=info method=GET path="/static/admin/js/nav_sidebar.js" host=samimalik.herokuapp.com request_id=dc0a9e11-0be4-4b74-abad-347789fe8305 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=304 bytes=222 protocol=https
+2021-04-22T16:48:08.304426+00:00 heroku[router]: at=info method=GET path="/static/admin/css/fonts.css" host=samimalik.herokuapp.com request_id=b6edd566-d6e2-4b21-8344-b0b23820c69c fwd="165.22.236.0" dyno=web.1 connect=0ms service=5ms status=304 bytes=222 protocol=https
+2021-04-22T16:48:08.304688+00:00 app[web.1]: 10.1.91.37 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.346934+00:00 app[web.1]: 10.1.91.37 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.347872+00:00 heroku[router]: at=info method=GET path="/static/admin/img/icon-addlink.svg" host=samimalik.herokuapp.com request_id=0e7217f0-8eb3-4bd1-9d88-ece58eb65a22 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=200 bytes=671 protocol=https
+2021-04-22T16:48:08.349075+00:00 app[web.1]: 10.1.16.73 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.349325+00:00 heroku[router]: at=info method=GET path="/static/admin/img/icon-changelink.svg" host=samimalik.herokuapp.com request_id=a3c8d352-c1d2-4921-baea-08d96608ffd8 fwd="165.22.236.0" dyno=web.1 connect=0ms service=5ms status=200 bytes=720 protocol=https
+2021-04-22T16:48:08.349941+00:00 app[web.1]: 10.1.10.225 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.350159+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Light-webfont.woff" host=samimalik.herokuapp.com request_id=da4d0b92-6f1d-4b7c-9c3a-d49046aa5f71 fwd="165.22.236.0" dyno=web.1 connect=0ms service=4ms status=304 bytes=224 protocol=https
+2021-04-22T16:48:08.350502+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Bold-webfont.woff" host=samimalik.herokuapp.com request_id=e3ae95b3-5a61-4861-a326-133f8e776bc6 fwd="165.22.236.0" dyno=web.1 connect=0ms service=5ms status=304 bytes=224 protocol=https
+2021-04-22T16:48:08.351025+00:00 app[web.1]: 10.1.14.16 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.356368+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:48:08 -0400] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:48:08.362460+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Regular-webfont.woff" host=samimalik.herokuapp.com request_id=d93c7b4f-ea8e-404d-82a9-61e7ed938ae9 fwd="165.22.236.0" dyno=web.1 connect=0ms service=16ms status=304 bytes=224 protocol=https
+2021-04-22T16:58:32.384414+00:00 app[api]: Set DJANGO_SECRET_KEY config vars by user sami.malik@sympatico.ca
+2021-04-22T16:58:32.384414+00:00 app[api]: Release v7 created by user sami.malik@sympatico.ca
+2021-04-22T16:58:32.639148+00:00 heroku[web.1]: Restarting
+2021-04-22T16:58:32.659972+00:00 heroku[web.1]: State changed from up to starting
+2021-04-22T16:58:33.346649+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2021-04-22T16:58:33.428300+00:00 app[web.1]: [2021-04-22 12:58:33 -0400] [8] [INFO] Worker exiting (pid: 8)
+2021-04-22T16:58:33.436874+00:00 app[web.1]: [2021-04-22 12:58:33 -0400] [7] [INFO] Worker exiting (pid: 7)
+2021-04-22T16:58:33.446662+00:00 app[web.1]: [2021-04-22 16:58:33 +0000] [4] [INFO] Handling signal: term
+2021-04-22T16:58:33.451592+00:00 app[web.1]: [2021-04-22 16:58:33 +0000] [4] [WARNING] Worker with pid 8 was terminated due to signal 15
+2021-04-22T16:58:33.451914+00:00 app[web.1]: [2021-04-22 16:58:33 +0000] [4] [WARNING] Worker with pid 7 was terminated due to signal 15
+2021-04-22T16:58:33.547280+00:00 app[web.1]: [2021-04-22 16:58:33 +0000] [4] [INFO] Shutting down: Master
+2021-04-22T16:58:33.643649+00:00 heroku[web.1]: Process exited with status 0
+2021-04-22T16:58:41.397051+00:00 heroku[web.1]: Starting process with command `gunicorn locallibrary.wsgi --log-file -`
+2021-04-22T16:58:45.087240+00:00 app[web.1]: [2021-04-22 16:58:45 +0000] [4] [INFO] Starting gunicorn 20.1.0
+2021-04-22T16:58:45.090098+00:00 app[web.1]: [2021-04-22 16:58:45 +0000] [4] [INFO] Listening at: http://0.0.0.0:29879 (4)
+2021-04-22T16:58:45.090691+00:00 app[web.1]: [2021-04-22 16:58:45 +0000] [4] [INFO] Using worker: sync
+2021-04-22T16:58:45.096685+00:00 app[web.1]: [2021-04-22 16:58:45 +0000] [7] [INFO] Booting worker with pid: 7
+2021-04-22T16:58:45.190597+00:00 app[web.1]: [2021-04-22 16:58:45 +0000] [8] [INFO] Booting worker with pid: 8
+2021-04-22T16:58:45.711130+00:00 heroku[web.1]: State changed from starting to up
+2021-04-22T16:58:51.260381+00:00 app[api]: Release v8 created by user sami.malik@sympatico.ca
+2021-04-22T16:58:51.260381+00:00 app[api]: Set DJANGO_DEBUG config vars by user sami.malik@sympatico.ca
+2021-04-22T16:58:52.113491+00:00 heroku[web.1]: Restarting
+2021-04-22T16:58:52.129032+00:00 heroku[web.1]: State changed from up to starting
+2021-04-22T16:58:53.209011+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2021-04-22T16:58:53.380795+00:00 app[web.1]: [2021-04-22 12:58:53 -0400] [8] [INFO] Worker exiting (pid: 8)
+2021-04-22T16:58:53.382963+00:00 app[web.1]: [2021-04-22 12:58:53 -0400] [7] [INFO] Worker exiting (pid: 7)
+2021-04-22T16:58:53.383540+00:00 app[web.1]: [2021-04-22 16:58:53 +0000] [4] [INFO] Handling signal: term
+2021-04-22T16:58:53.403261+00:00 app[web.1]: [2021-04-22 16:58:53 +0000] [4] [WARNING] Worker with pid 8 was terminated due to signal 15
+2021-04-22T16:58:53.406852+00:00 app[web.1]: [2021-04-22 16:58:53 +0000] [4] [WARNING] Worker with pid 7 was terminated due to signal 15
+2021-04-22T16:58:53.495248+00:00 app[web.1]: [2021-04-22 16:58:53 +0000] [4] [INFO] Shutting down: Master
+2021-04-22T16:58:53.633563+00:00 heroku[web.1]: Process exited with status 0
+2021-04-22T16:58:56.692252+00:00 heroku[web.1]: Starting process with command `gunicorn locallibrary.wsgi --log-file -`
+2021-04-22T16:58:59.345193+00:00 app[web.1]: [2021-04-22 16:58:59 +0000] [4] [INFO] Starting gunicorn 20.1.0
+2021-04-22T16:58:59.346733+00:00 app[web.1]: [2021-04-22 16:58:59 +0000] [4] [INFO] Listening at: http://0.0.0.0:28936 (4)
+2021-04-22T16:58:59.346778+00:00 app[web.1]: [2021-04-22 16:58:59 +0000] [4] [INFO] Using worker: sync
+2021-04-22T16:58:59.349872+00:00 app[web.1]: [2021-04-22 16:58:59 +0000] [7] [INFO] Booting worker with pid: 7
+2021-04-22T16:58:59.400668+00:00 app[web.1]: [2021-04-22 16:58:59 +0000] [8] [INFO] Booting worker with pid: 8
+2021-04-22T16:59:00.516593+00:00 heroku[web.1]: State changed from starting to up
+2021-04-22T16:59:03.507764+00:00 heroku[router]: at=info method=GET path="/admin/" host=samimalik.herokuapp.com request_id=a35b4425-672e-4862-bbcb-f34c6e55d450 fwd="165.22.236.0" dyno=web.1 connect=0ms service=99ms status=302 bytes=405 protocol=https
+2021-04-22T16:59:03.511875+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:03 -0400] "GET /admin/ HTTP/1.1" 302 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.698580+00:00 heroku[router]: at=info method=GET path="/admin/login/?next=/admin/" host=samimalik.herokuapp.com request_id=dd304681-a809-4693-97db-8898398f8b81 fwd="165.22.236.0" dyno=web.1 connect=0ms service=149ms status=200 bytes=2753 protocol=https
+2021-04-22T16:59:03.702650+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:03 -0400] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2219 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.764999+00:00 heroku[router]: at=info method=GET path="/static/admin/css/base.css" host=samimalik.herokuapp.com request_id=5a58d5cf-502b-4d9e-9d5c-0f66801d7315 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=304 bytes=223 protocol=https
+2021-04-22T16:59:03.769037+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/css/base.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.771558+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.771633+00:00 heroku[router]: at=info method=GET path="/static/admin/css/nav_sidebar.css" host=samimalik.herokuapp.com request_id=1376ee3b-f735-43a1-801b-3ccf04d4e578 fwd="165.22.236.0" dyno=web.1 connect=0ms service=4ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:03.827382+00:00 heroku[router]: at=info method=GET path="/static/admin/css/login.css" host=samimalik.herokuapp.com request_id=4b9da956-963a-4a4a-bd38-ca4dbf88adbe fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:03.831517+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/css/login.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.832021+00:00 heroku[router]: at=info method=GET path="/static/admin/css/responsive.css" host=samimalik.herokuapp.com request_id=55ddd094-a331-457b-be4a-93075f00f776 fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=223 protocol=https
+2021-04-22T16:59:03.832046+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.868712+00:00 app[web.1]: 10.1.89.167 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.869439+00:00 app[web.1]: 10.1.59.26 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.870380+00:00 heroku[router]: at=info method=GET path="/static/admin/js/nav_sidebar.js" host=samimalik.herokuapp.com request_id=e18ae5dc-7c2e-40d0-93ad-b5824def2994 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:03.870871+00:00 heroku[router]: at=info method=GET path="/static/admin/css/fonts.css" host=samimalik.herokuapp.com request_id=63982597-b174-48cc-aac8-18b69fd0f9bf fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:03.909836+00:00 app[web.1]: 10.1.89.167 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.910310+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Light-webfont.woff" host=samimalik.herokuapp.com request_id=991fcff7-35e0-4e0e-993d-41d2fee5b6e6 fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=224 protocol=https
+2021-04-22T16:59:03.910383+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:03 -0400] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:03.912096+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Regular-webfont.woff" host=samimalik.herokuapp.com request_id=1638dc84-f709-4802-baf8-1cbdc070cd81 fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=224 protocol=https
+2021-04-22T16:59:18.079149+00:00 heroku[router]: at=info method=POST path="/admin/login/?next=/admin/" host=samimalik.herokuapp.com request_id=ea508943-d2cd-4686-9ba9-30e305e3eeb5 fwd="165.22.236.0" dyno=web.1 connect=0ms service=292ms status=302 bytes=697 protocol=https
+2021-04-22T16:59:18.079363+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:18 -0400] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.154248+00:00 heroku[router]: at=info method=GET path="/admin/" host=samimalik.herokuapp.com request_id=33671fe2-d02e-4d2f-b6d4-0cbb553a8064 fwd="165.22.236.0" dyno=web.1 connect=0ms service=35ms status=200 bytes=6070 protocol=https
+2021-04-22T16:59:18.154325+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:18 -0400] "GET /admin/ HTTP/1.1" 200 5703 "https://samimalik.herokuapp.com/admin/login/?next=/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.221546+00:00 heroku[router]: at=info method=GET path="/static/admin/css/responsive.css" host=samimalik.herokuapp.com request_id=105b923d-45f5-49b9-b9e8-6d69e3167ddb fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=223 protocol=https
+2021-04-22T16:59:18.223494+00:00 heroku[router]: at=info method=GET path="/static/admin/css/base.css" host=samimalik.herokuapp.com request_id=23ee1d79-3b25-497b-9047-d862055b4668 fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=223 protocol=https
+2021-04-22T16:59:18.223569+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/css/base.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.225239+00:00 app[web.1]: 10.1.89.167 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.225574+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.226892+00:00 app[web.1]: 10.1.59.26 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.227613+00:00 heroku[router]: at=info method=GET path="/static/admin/css/dashboard.css" host=samimalik.herokuapp.com request_id=173f60e5-4c23-4997-981f-b3aec75aa6b0 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:18.227797+00:00 heroku[router]: at=info method=GET path="/static/admin/css/nav_sidebar.css" host=samimalik.herokuapp.com request_id=4e437c3c-8cf4-4eee-86ca-a72937c553a0 fwd="165.22.236.0" dyno=web.1 connect=0ms service=3ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:18.259879+00:00 heroku[router]: at=info method=GET path="/static/admin/css/fonts.css" host=samimalik.herokuapp.com request_id=09963f18-cd2d-41eb-b2ea-a51262ada9d0 fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:18.262036+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.262051+00:00 heroku[router]: at=info method=GET path="/static/admin/js/nav_sidebar.js" host=samimalik.herokuapp.com request_id=2b33bd5a-6543-4acb-93c0-e228cc6aa29b fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:18.263811+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.306359+00:00 heroku[router]: at=info method=GET path="/static/admin/img/icon-addlink.svg" host=samimalik.herokuapp.com request_id=8de16d05-1fd7-4e02-b39d-b7c07adf1d6c fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:18.310384+00:00 app[web.1]: 10.1.80.167 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.311276+00:00 heroku[router]: at=info method=GET path="/static/admin/img/icon-changelink.svg" host=samimalik.herokuapp.com request_id=23e02e93-e4e0-4381-b7f5-964056f9b3cc fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=222 protocol=https
+2021-04-22T16:59:18.311359+00:00 app[web.1]: 10.1.12.198 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/base.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.312814+00:00 app[web.1]: 10.1.59.26 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.313430+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Light-webfont.woff" host=samimalik.herokuapp.com request_id=79719913-ef64-4cd3-baaa-386d25e1dbcb fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=224 protocol=https
+2021-04-22T16:59:18.314113+00:00 app[web.1]: 10.1.10.225 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.314485+00:00 app[web.1]: 10.1.89.167 - - [22/Apr/2021:12:59:18 -0400] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0 "https://samimalik.herokuapp.com/static/admin/css/fonts.css" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68"
+2021-04-22T16:59:18.314947+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Regular-webfont.woff" host=samimalik.herokuapp.com request_id=ad9c4a1a-b178-454e-b6c8-96c38ffbc9d5 fwd="165.22.236.0" dyno=web.1 connect=0ms service=1ms status=304 bytes=224 protocol=https
+2021-04-22T16:59:18.316617+00:00 heroku[router]: at=info method=GET path="/static/admin/fonts/Roboto-Bold-webfont.woff" host=samimalik.herokuapp.com request_id=6c554f5a-fd19-4c4a-90a8-b63977c023e7 fwd="165.22.236.0" dyno=web.1 connect=0ms service=2ms status=304 bytes=224 protocol=https
+
+C:\Users\samim\source\repos\locallibrary>heroku ps
+Free dyno hours quota remaining this month: 547h 58m (99%)
+Free dyno usage for this app: 0h 0m (0%)
+For more information on dyno sleeping and how to upgrade, see:
+https://devcenter.heroku.com/articles/dyno-sleeping
+
+=== web (Free): gunicorn locallibrary.wsgi --log-file - (1)
+web.1: up 2021/04/22 12:59:00 -0400 (~ 1m ago)
+
+
+C:\Users\samim\source\repos\locallibrary>
